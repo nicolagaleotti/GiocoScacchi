@@ -11,8 +11,7 @@ namespace Prova
     {
         static void Main(string[] args)
         {
-            Scacchiera s = new Scacchiera();
-            s.CreaPosizioni(64);
+            Scacchiera s = Scacchiera.Istanza;
             foreach(Posizione p in s.Posizioni)
             {
                 Console.WriteLine(p.Lettera + " " + p.Numero);

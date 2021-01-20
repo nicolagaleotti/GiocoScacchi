@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Elementi
 {
-    public class Torre
+    public class Torre : Pedina
     {
+        public Torre(Colore colore) : base(5, colore) { }
+
+        public override void Muovi(Posizione nuovaPosizione)
+        {
+            if (nuovaPosizione.Lettera == Posizione.Lettera || nuovaPosizione.Numero == Posizione.Numero)
+            {
+                Posizione = nuovaPosizione;
+            }
+            else throw new Exception("Mossa non valida");
+        }
     }
 }

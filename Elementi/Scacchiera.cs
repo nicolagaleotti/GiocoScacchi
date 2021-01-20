@@ -8,42 +8,31 @@ namespace Elementi
 {
     public class Scacchiera
     {
-        public List<Posizione> Posizioni { get; private set; }
+        public static Scacchiera Istanza { get; } = new Scacchiera();
+        public List<Posizione> Posizioni { get; private set; } = new List<Posizione>();
 
-        public Scacchiera() { }
-
-        public void CreaPosizioni(int numero)
+        private Scacchiera()
         {
-            int x = 1;
-            char c = 'A';
-            for (int i = 1; i <= numero; i++)
+            for (char c = 'A'; c <= 'H'; c++)
             {
-                if (x <= 8)
+                for (int n = 1; n <= 8; n++)
                 {
-                    Posizione p = new Posizione(c, x);
-                    Posizioni.Add(p);
-                    x++;
-                }
-                else
-                {
-                    x = 1;
-                    c++;
-                    Posizione p = new Posizione(c, x);
-                    Posizioni.Add(p);
+                    Posizioni.Add(new Posizione(c, n));
                 }
             }
         }
 
+
         public Posizione GetPosizione(char lettera, int numero)
         {
-            foreach(Posizione p in Posizioni)
+            foreach (Posizione p in Posizioni)
             {
                 if (p.Lettera == lettera && p.Numero == numero)
                 {
                     return p;
                 }
-                else return null;
             }
+            throw new Exception("Posizione non valida!");
         }
 
         public void Schiera() { }

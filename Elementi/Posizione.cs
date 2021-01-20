@@ -13,7 +13,7 @@ namespace Elementi
         public Colore Colore { get; private set; }
         public Pedina Pedina { get; set; }
 
-        public Posizione(char lettera, int numero)
+        internal Posizione(char lettera, int numero)
         {
             Lettera = lettera;
             Numero = numero;
@@ -22,6 +22,10 @@ namespace Elementi
                 Colore = Colore.Nero;
             }
             else Colore = Colore.Bianco;
+        }
+        public override string ToString()
+        {
+            return $"{Lettera + Numero}";
         }
     }
 }

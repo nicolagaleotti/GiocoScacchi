@@ -10,7 +10,16 @@ namespace Elementi
     {
         public int Peso { get; private set; }
         public Colore Squadra { get; private set; }
-        public Posizione Posizione { get; set; }
+        public Posizione Posizione
+        {
+            get => Posizione; set
+            {
+                if (Posizione != null)
+                    Posizione.Pedina = null;
+                Posizione = value;
+                Posizione.Pedina = this;
+            }
+        }
 
         public Pedina(int peso, Colore squadra)
         {
@@ -19,5 +28,10 @@ namespace Elementi
         }
 
         public abstract void Muovi(Posizione nuovaPosizione);
+
+        public override string ToString()
+        {
+            return $"{GetType().Name} {Squadra} in {Posizione}";
+        }
     }
 }
