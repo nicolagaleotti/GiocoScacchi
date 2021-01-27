@@ -9,7 +9,7 @@ namespace Elementi
     public class Scacchiera
     {
         public static Scacchiera Istanza { get; } = new Scacchiera();
-        public List<Posizione> Posizioni { get; private set; } = new List<Posizione>();
+        public IDictionary<string, Posizione> Posizioni { get; private set; } = new Dictionary<string, Posizione>();
 
         private Scacchiera()
         {
@@ -17,7 +17,7 @@ namespace Elementi
             {
                 for (int n = 1; n <= 8; n++)
                 {
-                    Posizioni.Add(new Posizione(c, n));
+                    Posizioni.Add($"{c}{n}", new Posizione(c, n));
                 }
             }
         }
@@ -25,14 +25,50 @@ namespace Elementi
 
         public Posizione GetPosizione(char lettera, int numero)
         {
-            foreach (Posizione p in Posizioni)
+            string key = $"{lettera}{numero}";
+            if (Posizioni.ContainsKey(key))
+                return Posizioni[key];
+            throw new Exception($"Posizione {key} non trovata!");
+        }
+
+        public void Print()
+        {
+            string s = "";
+            int cellSize = 3;
+            PrintLetters(ref s, cellSize);
+            PrintLine(ref s, cellSize);
+            for (int n = 8; n >= 1; n--)
             {
-                if (p.Lettera == lettera && p.Numero == numero)
+                s += $"{n}|";
+                for (char c = 'A'; c <= 'H'; c++)
                 {
-                    return p;
+                    Posizione cella = GetPosizione(c, n);
+                    if (cella.Pedina != null)
+                        s += cella.Pedina.ShortName.PadRight(cellSize);
+                    else
+                        s += $"".PadRight(cellSize);
+                    s += "|";
                 }
+                s += "\n";
+                PrintLine(ref s, cellSize);
             }
-            throw new Exception("Posizione non valida!");
+            PrintLetters(ref s, cellSize);
+            Console.WriteLine(s);
+        }
+
+        private static void PrintLetters(ref string s, int cellSize)
+        {
+            s += " ";
+            for (char c = 'A'; c <= 'H'; c++)
+            {
+                s += $"| {c} ".PadRight(cellSize + 1);
+            }
+            s += "|\n";
+        }
+
+        private static void PrintLine(ref string s, int cellSize)
+        {
+            s += " |".PadRight(cellSize * 11, '-') + "-\n";
         }
 
         public void Schiera() { }

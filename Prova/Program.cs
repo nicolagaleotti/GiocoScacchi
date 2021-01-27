@@ -12,10 +12,7 @@ namespace Prova
         static void Main(string[] args)
         {
             Scacchiera s = Scacchiera.Istanza;
-            foreach(Posizione p in s.Posizioni)
-            {
-                Console.WriteLine(p.Lettera + " " + p.Numero);
-            }
+            s.Print();
             Console.ReadLine();
         }
     }

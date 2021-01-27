@@ -17,7 +17,7 @@ namespace Elementi
             {
                 Posizione = nuovaPosizione;
             }
-            else throw new Exception("Mossa non valida");
+            Errore();
         }
     }
 }

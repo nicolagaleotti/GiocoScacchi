@@ -23,7 +23,7 @@ namespace Elementi
                     {
                         Posizione = nuovaPosizione;
                     }
-                    else throw new Exception("Mossa non valida");
+                    Errore();
                     break;
 
                 case Colore.Nero:
@@ -35,7 +35,7 @@ namespace Elementi
                     {
                         Posizione = nuovaPosizione;
                     }
-                    else throw new Exception("Mossa non valida");
+                    Errore();
                     break;
             }
         }

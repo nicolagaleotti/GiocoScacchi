@@ -33,5 +33,14 @@ namespace Elementi
         {
             return $"{GetType().Name} {Squadra} in {Posizione}";
         }
+
+        public string Name => GetType().Name;
+
+        public virtual string ShortName => Name.Substring(0, 3);
+
+        protected void Errore()
+        {
+            throw new Exception($"Mossa per {Name} non valida");
+        }
     }
 }
