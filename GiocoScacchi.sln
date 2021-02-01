@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova", "Prova\Prova.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elementi", "Elementi\Elementi.csproj", "{E5DC400E-DF7F-44F0-87E1-0225F530850E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiocoScacchi", "GiocoScacchi\GiocoScacchi.csproj", "{ABC40505-7B35-4D2D-9FD2-2B5258741869}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E5DC400E-DF7F-44F0-87E1-0225F530850E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5DC400E-DF7F-44F0-87E1-0225F530850E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5DC400E-DF7F-44F0-87E1-0225F530850E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC40505-7B35-4D2D-9FD2-2B5258741869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC40505-7B35-4D2D-9FD2-2B5258741869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC40505-7B35-4D2D-9FD2-2B5258741869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC40505-7B35-4D2D-9FD2-2B5258741869}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,7 +26,7 @@ namespace Elementi
         {
             Lettera = lettera;
             Numero = numero;
-            if (lettera % 2 == 1 && numero % 2 == 1 || lettera % 2 == 0 && numero % 2 == 0)
+            if ((lettera - 'A') % 2 == 1 && numero % 2 == 1 || (lettera - 'A') % 2 == 0 && numero % 2 == 0)
             {
                 Colore = Colore.Nero;
             }
