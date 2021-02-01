@@ -12,6 +12,7 @@ namespace Elementi
 
         public override void Muovi(Posizione nuovaPosizione)
         {
+            base.Muovi(nuovaPosizione);
             if (Math.Abs(nuovaPosizione.Lettera - Posizione.Lettera) == Math.Abs(nuovaPosizione.Numero - Posizione.Numero))
             {
                 Posizione = nuovaPosizione;

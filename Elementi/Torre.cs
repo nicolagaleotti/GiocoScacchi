@@ -12,6 +12,7 @@ namespace Elementi
 
         public override void Muovi(Posizione nuovaPosizione)
         {
+            base.Muovi(nuovaPosizione);
             if (nuovaPosizione.Lettera == Posizione.Lettera || nuovaPosizione.Numero == Posizione.Numero)
             {
                 Posizione = nuovaPosizione;

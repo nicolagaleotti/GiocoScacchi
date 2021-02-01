@@ -12,6 +12,7 @@ namespace Elementi
 
         public override void Muovi(Posizione nuovaPosizione)
         {
+            base.Muovi(nuovaPosizione);
             switch (Squadra)
             {
                 case Colore.Bianco:

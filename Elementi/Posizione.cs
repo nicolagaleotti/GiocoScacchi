@@ -12,6 +12,15 @@ namespace Elementi
         public int Numero { get; private set; }
         public Colore Colore { get; private set; }
         public Pedina Pedina { get; set; }
+        public bool Occupata
+        {
+            get
+            {
+                if (Pedina != null)
+                    return true;
+                else return false;
+            }
+        }
 
         internal Posizione(char lettera, int numero)
         {

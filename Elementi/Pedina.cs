@@ -27,7 +27,11 @@ namespace Elementi
             Squadra = squadra;
         }
 
-        public abstract void Muovi(Posizione nuovaPosizione);
+        public virtual void Muovi(Posizione nuovaPosizione)
+        {
+            if (Posizione.Occupata == true)
+                PosizioneOccupata();
+        }
 
         public override string ToString()
         {
@@ -41,6 +45,11 @@ namespace Elementi
         protected void Errore()
         {
             throw new Exception($"Mossa per {Name} non valida");
+        }
+
+        protected void PosizioneOccupata()
+        {
+            throw new Exception($"Postamento non consentito. Posizione occupata!");
         }
     }
 }
