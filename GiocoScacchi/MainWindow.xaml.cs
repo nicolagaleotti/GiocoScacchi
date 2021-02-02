@@ -24,20 +24,6 @@ namespace GiocoScacchi
         public MainWindow()
         {
             InitializeComponent();
-            for (char c = 'A'; c <= 'H'; c++)
-            {
-                for (int n = 1; n <= 8; n++)
-                {
-                    if ((c - 'A') % 2 == 1 && n % 2 == 1 || (c - 'A') % 2 == 0 && n % 2 == 0)
-                    {
-                        //nero
-                    }
-                    else
-                    {
-                        //bianco
-                    }
-                }
-            }
         }
     }
 }
