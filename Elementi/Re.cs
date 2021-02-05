@@ -19,7 +19,8 @@ namespace Elementi
             {
                 Posizione = nuovaPosizione;
             }
-            Errore();
+            else
+                Errore();
         }
 
         public override string ShortName => " R";

@@ -17,7 +17,8 @@ namespace Elementi
             {
                 Posizione = nuovaPosizione;
             }
-            Errore();
+            else
+                Errore();
         }
     }
 }

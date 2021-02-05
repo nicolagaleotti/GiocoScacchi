@@ -24,7 +24,8 @@ namespace Elementi
                     {
                         Posizione = nuovaPosizione;
                     }
-                    Errore();
+                    else
+                        Errore();
                     break;
 
                 case Colore.Nero:
@@ -36,7 +37,8 @@ namespace Elementi
                     {
                         Posizione = nuovaPosizione;
                     }
-                    Errore();
+                    else
+                        Errore();
                     break;
             }
         }

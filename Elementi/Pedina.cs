@@ -10,14 +10,15 @@ namespace Elementi
     {
         public int Peso { get; private set; }
         public Colore Squadra { get; private set; }
+        private Posizione posizione;
         public Posizione Posizione
         {
-            get => Posizione; set
+            get => posizione; set
             {
-                if (Posizione != null)
-                    Posizione.Pedina = null;
-                Posizione = value;
-                Posizione.Pedina = this;
+                if (posizione != null)
+                    posizione.Pedina = null;
+                posizione = value;
+                posizione.Pedina = this;
             }
         }
 
@@ -29,13 +30,13 @@ namespace Elementi
 
         public virtual void Muovi(Posizione nuovaPosizione)
         {
-            if (Posizione.Occupata == true)
+            if (nuovaPosizione.Occupata == true)
                 PosizioneOccupata();
         }
 
         public override string ToString()
         {
-            return $"{GetType().Name} {Squadra} in {Posizione}";
+            return $"{GetType().Name} {Squadra} in {Posizione.Lettera}{Posizione.Numero}";
         }
 
         public string Name => GetType().Name;
@@ -49,7 +50,7 @@ namespace Elementi
 
         protected void PosizioneOccupata()
         {
-            throw new Exception($"Postamento non consentito. Posizione occupata!");
+            throw new Exception($"Spostamento non consentito. Posizione occupata!");
         }
     }
 }
