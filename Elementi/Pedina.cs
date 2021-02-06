@@ -39,7 +39,7 @@ namespace Elementi
             return $"{GetType().Name} {Squadra} in {Posizione.Lettera}{Posizione.Numero}";
         }
 
-        public string Name => GetType().Name;
+        public string Name => $"{GetType().Name}\n({Squadra})";
 
         public virtual string ShortName => Name.Substring(0, 3);
 

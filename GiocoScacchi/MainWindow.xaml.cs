@@ -1430,5 +1430,1189 @@ namespace GiocoScacchi
                 }
             }
         }
+
+        private void A4_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["A4"].Pedina;
+                    A4.Content = "";
+                    spostare = false;
+                    precedente = A4;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    A4.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["A4"]);
+                    A4.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void B4_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["B4"].Pedina;
+                    B4.Content = "";
+                    spostare = false;
+                    precedente = B4;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    B4.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["B4"]);
+                    B4.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void C4_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["C4"].Pedina;
+                    C4.Content = "";
+                    spostare = false;
+                    precedente = C4;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    C4.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["C4"]);
+                    C4.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void D4_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["D4"].Pedina;
+                    D4.Content = "";
+                    spostare = false;
+                    precedente = D4;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    D4.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["D4"]);
+                    D4.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void E4_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["E4"].Pedina;
+                    E4.Content = "";
+                    spostare = false;
+                    precedente = E4;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    E4.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["E4"]);
+                    E4.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void F4_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["F4"].Pedina;
+                    F4.Content = "";
+                    spostare = false;
+                    precedente = F4;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    F4.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["F4"]);
+                    F4.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void G4_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["G4"].Pedina;
+                    G4.Content = "";
+                    spostare = false;
+                    precedente = G4;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    G4.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["G4"]);
+                    G4.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void H4_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["H4"].Pedina;
+                    H4.Content = "";
+                    spostare = false;
+                    precedente = H4;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    H4.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["H4"]);
+                    H4.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void A3_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["A3"].Pedina;
+                    A3.Content = "";
+                    spostare = false;
+                    precedente = A3;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    A3.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["A3"]);
+                    A3.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void B3_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["B3"].Pedina;
+                    B3.Content = "";
+                    spostare = false;
+                    precedente = B3;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    B3.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["B3"]);
+                    B3.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void C3_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["C3"].Pedina;
+                    C3.Content = "";
+                    spostare = false;
+                    precedente = C3;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    C3.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["C3"]);
+                    C3.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void D3_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["D3"].Pedina;
+                    D3.Content = "";
+                    spostare = false;
+                    precedente = D3;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    D3.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["D3"]);
+                    D3.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void E3_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["E3"].Pedina;
+                    E3.Content = "";
+                    spostare = false;
+                    precedente = E3;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    E3.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["E3"]);
+                    E3.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void F3_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["F3"].Pedina;
+                    F3.Content = "";
+                    spostare = false;
+                    precedente = F3;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    F3.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["F3"]);
+                    F3.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void G3_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["G3"].Pedina;
+                    G3.Content = "";
+                    spostare = false;
+                    precedente = G3;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    G3.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["G3"]);
+                    G3.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void H3_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["H3"].Pedina;
+                    H3.Content = "";
+                    spostare = false;
+                    precedente = H3;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    H3.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["H3"]);
+                    H3.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void A2_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["A2"].Pedina;
+                    A2.Content = "";
+                    spostare = false;
+                    precedente = A2;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    A2.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["A2"]);
+                    A2.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void B2_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["B2"].Pedina;
+                    B2.Content = "";
+                    spostare = false;
+                    precedente = B2;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    B2.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["B2"]);
+                    B2.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void C2_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["C2"].Pedina;
+                    C2.Content = "";
+                    spostare = false;
+                    precedente = C2;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    C2.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["C2"]);
+                    C2.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void D2_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["D2"].Pedina;
+                    D2.Content = "";
+                    spostare = false;
+                    precedente = D2;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    D2.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["D2"]);
+                    D2.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void E2_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["E2"].Pedina;
+                    E2.Content = "";
+                    spostare = false;
+                    precedente = E2;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    E2.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["E2"]);
+                    E2.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void F2_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["F2"].Pedina;
+                    F2.Content = "";
+                    spostare = false;
+                    precedente = F2;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    F2.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["F2"]);
+                    F2.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void G2_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["G2"].Pedina;
+                    G2.Content = "";
+                    spostare = false;
+                    precedente = G2;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    G2.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["G2"]);
+                    G2.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void H2_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["H2"].Pedina;
+                    H2.Content = "";
+                    spostare = false;
+                    precedente = H2;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    H2.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["H2"]);
+                    H2.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void A1_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["A1"].Pedina;
+                    A1.Content = "";
+                    spostare = false;
+                    precedente = A1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    A1.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["A1"]);
+                    A1.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void B1_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["B1"].Pedina;
+                    B1.Content = "";
+                    spostare = false;
+                    precedente = B1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    B1.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["B1"]);
+                    B1.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void C1_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["C1"].Pedina;
+                    C1.Content = "";
+                    spostare = false;
+                    precedente = C1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    C1.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["C1"]);
+                    C1.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void D1_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["D1"].Pedina;
+                    D1.Content = "";
+                    spostare = false;
+                    precedente = D1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    D1.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["D1"]);
+                    D1.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void E1_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["E1"].Pedina;
+                    E1.Content = "";
+                    spostare = false;
+                    precedente = E1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    E1.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["E1"]);
+                    E1.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void F1_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["F1"].Pedina;
+                    F1.Content = "";
+                    spostare = false;
+                    precedente = F1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    F1.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["F1"]);
+                    F1.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void G1_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["G1"].Pedina;
+                    G1.Content = "";
+                    spostare = false;
+                    precedente = G1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    G1.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["G1"]);
+                    G1.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
+
+        private void H1_Click(object sender, RoutedEventArgs e)
+        {
+            if (spostare == true)
+            {
+                try
+                {
+                    daSpostare = s.Posizioni["H1"].Pedina;
+                    H1.Content = "";
+                    spostare = false;
+                    precedente = H1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    H1.Content = daSpostare.Name;
+                }
+            }
+            else
+            {
+                try
+                {
+                    daSpostare.Muovi(s.Posizioni["H1"]);
+                    H1.Content = daSpostare.Name;
+                    spostare = true;
+                    daSpostare = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    spostare = true;
+                    precedente.Content = daSpostare.Name;
+                    precedente = null;
+                }
+            }
+        }
     }
 }
