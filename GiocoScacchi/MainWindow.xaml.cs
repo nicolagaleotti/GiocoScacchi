@@ -24,15 +24,16 @@ namespace GiocoScacchi
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show("BUONA PARTITA!\nInizia a muovere la squadra Bianca");
             Schiera();
         }
-
 
         bool spostare = true;
         Pedina daSpostare;
         Scacchiera s = Scacchiera.Istanza;
         IDictionary<string, Posizione> Posizioni = Scacchiera.Istanza.Posizioni;
         Button precedente;
+        Colore colore = Colore.Bianco;
 
         private void Schiera()
         {
@@ -247,6 +248,11 @@ namespace GiocoScacchi
 
         }
 
+        private void ErroreColore()
+        {
+            throw new Exception("Hai già mosso una pedina di questo colore!\nMuovine una dell'altra squadra.");
+        }
+
         private void B7_Click(object sender, RoutedEventArgs e)
         {
             if (spostare == true)
@@ -254,6 +260,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["B7"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     B7.Content = "";
                     spostare = false;
                     precedente = B7;
@@ -273,6 +281,10 @@ namespace GiocoScacchi
                     B7.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -291,6 +303,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["B6"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     B6.Content = "";
                     spostare = false;
                     precedente = B6;
@@ -310,6 +324,10 @@ namespace GiocoScacchi
                     B6.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -328,6 +346,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["B5"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     B5.Content = "";
                     spostare = false;
                     precedente = B5;
@@ -347,6 +367,10 @@ namespace GiocoScacchi
                     B5.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -365,6 +389,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["A8"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     A8.Content = "";
                     spostare = false;
                     precedente = A8;
@@ -384,6 +410,10 @@ namespace GiocoScacchi
                     A8.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -402,6 +432,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["B8"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     B8.Content = "";
                     spostare = false;
                     precedente = B8;
@@ -421,6 +453,10 @@ namespace GiocoScacchi
                     B8.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -439,6 +475,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["C8"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     C8.Content = "";
                     spostare = false;
                     precedente = C8;
@@ -458,6 +496,10 @@ namespace GiocoScacchi
                     C8.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -476,6 +518,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["D8"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     D8.Content = "";
                     spostare = false;
                     precedente = D8;
@@ -495,6 +539,10 @@ namespace GiocoScacchi
                     D8.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -513,6 +561,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["E8"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     E8.Content = "";
                     spostare = false;
                     precedente = E8;
@@ -532,6 +582,10 @@ namespace GiocoScacchi
                     E8.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -550,6 +604,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["F8"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     F8.Content = "";
                     spostare = false;
                     precedente = F8;
@@ -569,6 +625,10 @@ namespace GiocoScacchi
                     F8.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -587,6 +647,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["G8"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     G8.Content = "";
                     spostare = false;
                     precedente = G8;
@@ -606,6 +668,10 @@ namespace GiocoScacchi
                     G8.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -624,6 +690,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["H8"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     H8.Content = "";
                     spostare = false;
                     precedente = H8;
@@ -643,6 +711,10 @@ namespace GiocoScacchi
                     H8.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -661,6 +733,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["A7"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     A7.Content = "";
                     spostare = false;
                     precedente = A7;
@@ -680,6 +754,10 @@ namespace GiocoScacchi
                     A7.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -698,6 +776,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["C7"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     C7.Content = "";
                     spostare = false;
                     precedente = C7;
@@ -717,6 +797,10 @@ namespace GiocoScacchi
                     C7.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -735,6 +819,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["D7"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     D7.Content = "";
                     spostare = false;
                     precedente = D7;
@@ -754,6 +840,10 @@ namespace GiocoScacchi
                     D7.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -772,6 +862,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["E7"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     E7.Content = "";
                     spostare = false;
                     precedente = E7;
@@ -791,6 +883,10 @@ namespace GiocoScacchi
                     E7.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -809,6 +905,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["F7"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     F7.Content = "";
                     spostare = false;
                     precedente = F7;
@@ -828,6 +926,10 @@ namespace GiocoScacchi
                     F7.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -846,6 +948,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["G7"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     G7.Content = "";
                     spostare = false;
                     precedente = G7;
@@ -865,6 +969,10 @@ namespace GiocoScacchi
                     G7.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -883,6 +991,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["H7"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     H7.Content = "";
                     spostare = false;
                     precedente = H7;
@@ -902,6 +1012,10 @@ namespace GiocoScacchi
                     H7.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -920,6 +1034,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["A6"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     A6.Content = "";
                     spostare = false;
                     precedente = A6;
@@ -939,6 +1055,10 @@ namespace GiocoScacchi
                     A6.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -957,6 +1077,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["C6"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     C6.Content = "";
                     spostare = false;
                     precedente = C6;
@@ -976,6 +1098,10 @@ namespace GiocoScacchi
                     C6.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -994,6 +1120,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["D6"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     D6.Content = "";
                     spostare = false;
                     precedente = D6;
@@ -1013,6 +1141,10 @@ namespace GiocoScacchi
                     D6.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1031,6 +1163,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["E6"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     E6.Content = "";
                     spostare = false;
                     precedente = E6;
@@ -1050,6 +1184,10 @@ namespace GiocoScacchi
                     E6.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1068,6 +1206,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["F6"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     F6.Content = "";
                     spostare = false;
                     precedente = F6;
@@ -1087,6 +1227,10 @@ namespace GiocoScacchi
                     F6.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1105,6 +1249,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["G6"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     G6.Content = "";
                     spostare = false;
                     precedente = G6;
@@ -1124,6 +1270,10 @@ namespace GiocoScacchi
                     G6.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1142,6 +1292,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["H6"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     H6.Content = "";
                     spostare = false;
                     precedente = H6;
@@ -1161,6 +1313,10 @@ namespace GiocoScacchi
                     H6.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1179,6 +1335,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["A5"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     A5.Content = "";
                     spostare = false;
                     precedente = A5;
@@ -1198,6 +1356,10 @@ namespace GiocoScacchi
                     A5.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1216,6 +1378,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["C5"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     C5.Content = "";
                     spostare = false;
                     precedente = C5;
@@ -1235,6 +1399,10 @@ namespace GiocoScacchi
                     C5.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1253,6 +1421,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["D5"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     D5.Content = "";
                     spostare = false;
                     precedente = D5;
@@ -1272,6 +1442,10 @@ namespace GiocoScacchi
                     D5.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1290,6 +1464,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["E5"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     E5.Content = "";
                     spostare = false;
                     precedente = E5;
@@ -1309,6 +1485,10 @@ namespace GiocoScacchi
                     E5.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1327,6 +1507,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["F5"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     F5.Content = "";
                     spostare = false;
                     precedente = F5;
@@ -1346,6 +1528,10 @@ namespace GiocoScacchi
                     F5.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1364,6 +1550,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["G5"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     G5.Content = "";
                     spostare = false;
                     precedente = G5;
@@ -1383,6 +1571,10 @@ namespace GiocoScacchi
                     G5.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1401,6 +1593,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["H5"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     H5.Content = "";
                     spostare = false;
                     precedente = H5;
@@ -1420,6 +1614,10 @@ namespace GiocoScacchi
                     H5.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1438,6 +1636,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["A4"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     A4.Content = "";
                     spostare = false;
                     precedente = A4;
@@ -1457,6 +1657,10 @@ namespace GiocoScacchi
                     A4.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1475,6 +1679,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["B4"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     B4.Content = "";
                     spostare = false;
                     precedente = B4;
@@ -1494,6 +1700,10 @@ namespace GiocoScacchi
                     B4.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1512,6 +1722,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["C4"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     C4.Content = "";
                     spostare = false;
                     precedente = C4;
@@ -1531,6 +1743,10 @@ namespace GiocoScacchi
                     C4.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1549,6 +1765,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["D4"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     D4.Content = "";
                     spostare = false;
                     precedente = D4;
@@ -1568,6 +1786,10 @@ namespace GiocoScacchi
                     D4.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1586,6 +1808,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["E4"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     E4.Content = "";
                     spostare = false;
                     precedente = E4;
@@ -1605,6 +1829,10 @@ namespace GiocoScacchi
                     E4.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1623,6 +1851,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["F4"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     F4.Content = "";
                     spostare = false;
                     precedente = F4;
@@ -1642,6 +1872,10 @@ namespace GiocoScacchi
                     F4.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1660,6 +1894,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["G4"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     G4.Content = "";
                     spostare = false;
                     precedente = G4;
@@ -1679,6 +1915,10 @@ namespace GiocoScacchi
                     G4.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1697,6 +1937,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["H4"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     H4.Content = "";
                     spostare = false;
                     precedente = H4;
@@ -1716,6 +1958,10 @@ namespace GiocoScacchi
                     H4.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1734,6 +1980,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["A3"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     A3.Content = "";
                     spostare = false;
                     precedente = A3;
@@ -1753,6 +2001,10 @@ namespace GiocoScacchi
                     A3.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1771,6 +2023,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["B3"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     B3.Content = "";
                     spostare = false;
                     precedente = B3;
@@ -1790,6 +2044,10 @@ namespace GiocoScacchi
                     B3.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1808,6 +2066,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["C3"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     C3.Content = "";
                     spostare = false;
                     precedente = C3;
@@ -1827,6 +2087,10 @@ namespace GiocoScacchi
                     C3.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1845,6 +2109,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["D3"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     D3.Content = "";
                     spostare = false;
                     precedente = D3;
@@ -1864,6 +2130,10 @@ namespace GiocoScacchi
                     D3.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1882,6 +2152,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["E3"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     E3.Content = "";
                     spostare = false;
                     precedente = E3;
@@ -1901,6 +2173,10 @@ namespace GiocoScacchi
                     E3.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1919,6 +2195,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["F3"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     F3.Content = "";
                     spostare = false;
                     precedente = F3;
@@ -1938,6 +2216,10 @@ namespace GiocoScacchi
                     F3.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1956,6 +2238,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["G3"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     G3.Content = "";
                     spostare = false;
                     precedente = G3;
@@ -1975,6 +2259,10 @@ namespace GiocoScacchi
                     G3.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -1993,6 +2281,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["H3"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     H3.Content = "";
                     spostare = false;
                     precedente = H3;
@@ -2012,6 +2302,10 @@ namespace GiocoScacchi
                     H3.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2030,6 +2324,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["A2"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     A2.Content = "";
                     spostare = false;
                     precedente = A2;
@@ -2049,6 +2345,10 @@ namespace GiocoScacchi
                     A2.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2067,6 +2367,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["B2"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     B2.Content = "";
                     spostare = false;
                     precedente = B2;
@@ -2086,6 +2388,10 @@ namespace GiocoScacchi
                     B2.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2104,6 +2410,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["C2"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     C2.Content = "";
                     spostare = false;
                     precedente = C2;
@@ -2123,6 +2431,10 @@ namespace GiocoScacchi
                     C2.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2141,6 +2453,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["D2"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     D2.Content = "";
                     spostare = false;
                     precedente = D2;
@@ -2160,6 +2474,10 @@ namespace GiocoScacchi
                     D2.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2178,6 +2496,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["E2"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     E2.Content = "";
                     spostare = false;
                     precedente = E2;
@@ -2197,6 +2517,10 @@ namespace GiocoScacchi
                     E2.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2215,6 +2539,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["F2"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     F2.Content = "";
                     spostare = false;
                     precedente = F2;
@@ -2234,6 +2560,10 @@ namespace GiocoScacchi
                     F2.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2252,6 +2582,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["G2"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     G2.Content = "";
                     spostare = false;
                     precedente = G2;
@@ -2271,6 +2603,10 @@ namespace GiocoScacchi
                     G2.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2289,6 +2625,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["H2"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     H2.Content = "";
                     spostare = false;
                     precedente = H2;
@@ -2308,6 +2646,10 @@ namespace GiocoScacchi
                     H2.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2326,6 +2668,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["A1"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     A1.Content = "";
                     spostare = false;
                     precedente = A1;
@@ -2345,6 +2689,10 @@ namespace GiocoScacchi
                     A1.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2363,6 +2711,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["B1"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     B1.Content = "";
                     spostare = false;
                     precedente = B1;
@@ -2382,6 +2732,10 @@ namespace GiocoScacchi
                     B1.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2400,6 +2754,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["C1"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     C1.Content = "";
                     spostare = false;
                     precedente = C1;
@@ -2419,6 +2775,10 @@ namespace GiocoScacchi
                     C1.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2437,6 +2797,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["D1"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     D1.Content = "";
                     spostare = false;
                     precedente = D1;
@@ -2456,6 +2818,10 @@ namespace GiocoScacchi
                     D1.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2474,6 +2840,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["E1"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     E1.Content = "";
                     spostare = false;
                     precedente = E1;
@@ -2493,6 +2861,10 @@ namespace GiocoScacchi
                     E1.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2511,6 +2883,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["F1"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     F1.Content = "";
                     spostare = false;
                     precedente = F1;
@@ -2530,6 +2904,10 @@ namespace GiocoScacchi
                     F1.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2548,6 +2926,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["G1"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     G1.Content = "";
                     spostare = false;
                     precedente = G1;
@@ -2567,6 +2947,10 @@ namespace GiocoScacchi
                     G1.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
@@ -2585,6 +2969,8 @@ namespace GiocoScacchi
                 try
                 {
                     daSpostare = s.Posizioni["H1"].Pedina;
+                    if (daSpostare.Squadra != colore)
+                        ErroreColore();
                     H1.Content = "";
                     spostare = false;
                     precedente = H1;
@@ -2604,6 +2990,10 @@ namespace GiocoScacchi
                     H1.Content = daSpostare.Name;
                     spostare = true;
                     daSpostare = null;
+                    if (colore == Colore.Bianco)
+                        colore = Colore.Nero;
+                    else
+                        colore = Colore.Bianco;
                 }
                 catch (Exception ex)
                 {
